@@ -1,3 +1,5 @@
+const start = process.hrtime();
+
 const fs = require('fs');
 
 const rows = fs.readFileSync('input.txt', 'utf8').split('\n');
@@ -32,3 +34,6 @@ const mustContain = function (bag) {
 let answer = mustContain('shiny gold');
 
 console.log(`Answer: ${answer}`);
+
+const [seconds, nanoseconds] = process.hrtime(start);
+console.info('Execution time: %ds %dms', seconds, nanoseconds / 1000000);
