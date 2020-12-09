@@ -5,7 +5,7 @@ const rows = fs.readFileSync('input.txt', 'utf8').split('\n').map((number) => pa
 const threshold = 25;
 
 const answer = rows.find(function (number, index) {
-    if ((index +1) <= threshold) {
+    if ((index + 1) <= threshold) {
         return false;
     }
 
