@@ -16,14 +16,14 @@ Array.prototype.min = function () {
     // the min value of the array
     return this.length === 0
         ? null
-        : [...this].sort()[0];
+        : [...this].numsort()[0];
 };
 
 Array.prototype.max = function () {
     // the max value of the array
     return this.length === 0
         ? null
-        : [...this].sort()[this.length - 1];
+        : [...this].numsort()[this.length - 1];
 };
 
 Array.prototype.numeric = function () {
